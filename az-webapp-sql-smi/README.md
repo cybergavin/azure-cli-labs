@@ -1,0 +1,36 @@
+# PHP Web Application (Azure App Service) with Azure SQL
+
+- A demo of a simple PHP web application deployed on an Azure APp Service Plan and connects to an Azure SQL Database using a system-assigned managed identity (enabled for the web application).
+- Creates the following Azure resources:
+    - Resource Group for all the required resources
+    - App Service Plan to host the web application
+    - Web Application (App Service)
+    - Logical SQL Server
+    - Azure SQL Database
+- As Azure PaaS services are used, these services are public by default. However, the Azure SQL Server will deny connectivity by default and allow only Azure services (e.g. App Service webapp) and your public IP to connect.
+
+
+### Requirements
+
+The following requirements must be met to launch this lab/demo successfully:
+- Use a Linux system (any distro, WSL)
+- **sqlcmd** command line utility for connecting to Azure SQL must be installed.  Refer the [Microsoft docs](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver15). Ensure that *sqlcmd* is in the PATH.
+- **Azure CLI** must be installed
+- **git** must be installed
+- Unrestricted Internet connectivity for Azure services
+- An Azure AD user with **contributor** privileges on a subscription or with a custom role that allows the creation of all the required resources (don't go crazy for a demo!).
+
+### Usage
+- Clone the git repo - `git clone https://github.com/cybergavin/azure-cli-labs.git`
+- Switch directory - `cd az-webapp-sql-smi`
+- Modify the config `install-demo.cfg` as required. 
+- Launch demo - `bash install-demo.sh`
+
+**NOTE:** You will be required to enter the password for your Azure AD user twice - intially for the demo build and again for the deployment of the single page PHP webapp from your local git.
+
+
+#### Environment Tested
+This lab was tested in the following environment:
+- WSL 1 (Fedora Remix) on Windows 10
+- Azure AD user with contributor privilege on an Azure subscription
+- Internet connectivity allowing my workstation to connect to Azure services.

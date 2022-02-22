@@ -1,0 +1,4 @@
+*.sh
+*.stderr
+*.stdout
+*.cfg
