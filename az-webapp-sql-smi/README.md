@@ -9,8 +9,10 @@
     - Azure SQL Database
 - As Azure PaaS services are used, these services are public by default. However, the Azure SQL Server will deny connectivity by default and allow only Azure services (e.g. App Service webapp) and your public IP to connect.
 
+---
 
-### Requirements
+
+## Requirements
 
 The following requirements must be met to launch this lab/demo successfully:
 - Use a Linux system (any distro, WSL)
@@ -20,7 +22,9 @@ The following requirements must be met to launch this lab/demo successfully:
 - Unrestricted Internet connectivity for Azure services
 - An Azure AD user with **contributor** privileges on a subscription or with a custom role that allows the creation of all the required resources (don't go crazy for a demo!).
 
-### Usage
+---
+
+## Usage
 - Clone the git repo - `git clone https://github.com/cybergavin/azure-cli-labs.git`
 - Switch directory - `cd az-webapp-sql-smi`
 - Modify the config `install-demo.cfg` as required. 
@@ -28,8 +32,16 @@ The following requirements must be met to launch this lab/demo successfully:
 
 **NOTE:** You will be required to enter the password for your Azure AD user twice - intially for the demo build and again for the deployment of the single page PHP webapp from your local git.
 
+**Launching demo**
 
-#### Environment Tested
+![](https://github.com/cybergavin/azure-cli-labs/images/01-az-cli-php-sql-demo.PNG) 
+
+**Resources created on Azure**
+![](https://github.com/cybergavin/azure-cli-labs/images/02-az-cli-php-sql-demo.PNG) 
+
+---
+
+## Environment Tested
 This lab was tested in the following environment:
 - WSL 1 (Fedora Remix) on Windows 10
 - Azure AD user with contributor privilege on an Azure subscription
