@@ -40,6 +40,10 @@ The following requirements must be met to launch this lab/demo successfully:
 
 ![](https://github.com/cybergavin/azure-cli-labs/blob/master/images/02-az-cli-php-sql-demo.PNG) 
 
+**PHP Web Application**
+
+![](https://github.com/cybergavin/azure-cli-labs/blob/master/images/03-az-cli-php-sql-demo.PNG) 
+
 ---
 
 ## Environment Tested
