@@ -1,6 +1,7 @@
  <!-- 
 	 Cybergavin - 22-FEB-2022
 	 Adapted from https://github.com/uglide/azure-content/blob/master/articles/app-service-web/web-sites-php-sql-database-deploy-use-git.md
+	 Modified original to make it a single-page PHP web application and display the connection string.
 -->
  <html>
  <head>
