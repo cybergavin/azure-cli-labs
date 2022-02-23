@@ -34,10 +34,11 @@ The following requirements must be met to launch this lab/demo successfully:
 
 **Launching demo**
 
-![](https://github.com/cybergavin/azure-cli-labs/images/01-az-cli-php-sql-demo.PNG) 
+![](https://github.com/cybergavin/azure-cli-labs/blob/master/images/01-az-cli-php-sql-demo.PNG) 
 
 **Resources created on Azure**
-![](https://github.com/cybergavin/azure-cli-labs/images/02-az-cli-php-sql-demo.PNG) 
+
+![](https://github.com/cybergavin/azure-cli-labs/blob/master/images/02-az-cli-php-sql-demo.PNG) 
 
 ---
 
