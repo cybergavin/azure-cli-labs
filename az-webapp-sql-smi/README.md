@@ -1,6 +1,6 @@
 # PHP Web Application (Azure App Service) with Azure SQL
 
-- A demo of a simple PHP web application deployed on an Azure APp Service Plan and connects to an Azure SQL Database using a system-assigned managed identity (enabled for the web application).
+- A demo of a simple PHP web application deployed on an Azure App Service Plan and connects to an Azure SQL Database using a system-assigned managed identity (enabled for the web application).
 - Creates the following Azure resources:
     - Resource Group for all the required resources
     - App Service Plan to host the web application
@@ -20,7 +20,7 @@ The following requirements must be met to launch this lab/demo successfully:
 - **Azure CLI** must be installed
 - **git** must be installed
 - Unrestricted Internet connectivity for Azure services
-- An Azure AD user with **contributor** privileges on a subscription or with a custom role that allows the creation of all the required resources (don't go crazy for a demo!).
+- An Azure AD user with **Contributor** privileges on a subscription or with a custom role that allows the creation of all the required resources (keep it simple with 'Contributor' for a demo).
 
 ---
 
@@ -49,5 +49,5 @@ The following requirements must be met to launch this lab/demo successfully:
 ## Environment Tested
 This lab was tested in the following environment:
 - WSL 1 (Fedora Remix) on Windows 10
-- Azure AD user with contributor privilege on an Azure subscription
-- Internet connectivity allowing my workstation to connect to Azure services.
+- Azure AD user with Contributor role on an Azure subscription
+- Internet connectivity allowing my workstation to connect to Azure services
