@@ -1,13 +1,14 @@
 # PHP Web Application (Azure App Service) with Azure SQL
 
-- A demo of a simple PHP web application deployed on an Azure App Service Plan and connects to an Azure SQL Database using a system-assigned managed identity (enabled for the web application).
+- A demo of a simple, single-page PHP web application deployed on an Azure App Service Plan and connects to an Azure SQL Database using a system-assigned managed identity (enabled for the web application).
 - Creates the following Azure resources:
     - Resource Group for all the required resources
-    - App Service Plan to host the web application
+    - A Linux App Service Plan (B1 SKU) to host the web application
     - Web Application (App Service)
     - Logical SQL Server
     - Azure SQL Database
 - As Azure PaaS services are used, these services are public by default. However, the Azure SQL Server will deny connectivity by default and allow only Azure services (e.g. App Service webapp) and your public IP to connect.
+- All azure resources will be suffixed by a random 5-character string to attempt uniqueness for their names.
 
 ---
 
@@ -15,7 +16,8 @@
 ## Requirements
 
 The following requirements must be met to launch this lab/demo successfully:
-- Use a Linux system (any distro, WSL)
+- Linux (any distro, WSL)
+- Perl (usually available with any modern Linux distro)
 - **sqlcmd** command line utility for connecting to Azure SQL must be installed.  Refer the [Microsoft docs](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-ver15). Ensure that *sqlcmd* is in the PATH.
 - **Azure CLI** must be installed
 - **git** must be installed
@@ -26,11 +28,10 @@ The following requirements must be met to launch this lab/demo successfully:
 
 ## Usage
 - Clone the git repo - `git clone https://github.com/cybergavin/azure-cli-labs.git`
-- Switch directory - `cd az-webapp-sql-smi`
+- Switch directory - `cd azure-cli-labs\az-webapp-sql-smi`
 - Modify the config `install-demo.cfg` as required. 
 - Launch demo - `bash install-demo.sh`
 
-**NOTE:** You will be required to enter the password for your Azure AD user twice - intially for the demo build and again for the deployment of the single page PHP webapp from your local git.
 
 **Launching demo**
 
@@ -48,6 +49,7 @@ The following requirements must be met to launch this lab/demo successfully:
 
 ## Environment Tested
 This lab was tested in the following environment:
-- WSL 1 (Fedora Remix) on Windows 10
+
+- WSL 1 (Fedora Remix) on Windows 10 / Rocky Linux 9 VM on VMware Workstation 15 Pro
 - Azure AD user with Contributor role on an Azure subscription
 - Internet connectivity allowing my workstation to connect to Azure services

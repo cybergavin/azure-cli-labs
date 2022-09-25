@@ -22,7 +22,7 @@
  </head>
  <body>
 <p align="justify">
-	This sample PHP demo web application (adapted from <a href="https://github.com/uglide/azure-content/blob/master/articles/app-service-web/web-sites-php-sql-database-deploy-use-git.md" target="_blank">here</a>) may be used with the accompanying guidelines in this git repo, for deployment on an <b>Azure App Service Plan</b> with an <b>Azure SQL Database</b> (connection enabled by a <b>system-assigned managed identity</b>). 
+	This sample <a href="https://github.com/cybergavin/azure-cli-labs/tree/master/az-webapp-sql-smi">PHP demo web application</a> (adapted from <a href="https://github.com/uglide/azure-content/blob/master/articles/app-service-web/web-sites-php-sql-database-deploy-use-git.md" target="_blank">here</a>) may be used with the accompanying guidelines in this git repo, for deployment on an <b>Azure App Service Plan</b> with an <b>Azure SQL Database</b> (connection enabled by a <b>system-assigned managed identity</b>). 
 </p>
 <br /> 
 <?php
@@ -43,12 +43,7 @@ echo "The <b>Connection string</b> used for Azure SQL with a system-assigned man
        <input type="submit" name="submit" value="Submit" />
  </form>
  <?php
- // Connect to database using a user-assigned managed identity. Obtain connection details from environment variables.
- //$db_server = getenv("DB_SERVER");
- //$db_name = getenv("DB_NAME");
-
-try {
-	//$connectionInfo = "Database = $db_name; Authentication = ActiveDirectoryMsi;";
+ try {
 	$conn = new PDO($connectionString);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
  }
