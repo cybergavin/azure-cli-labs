@@ -28,7 +28,7 @@ The following requirements must be met to launch this lab/demo successfully:
 
 ## Usage
 - Clone the git repo - `git clone https://github.com/cybergavin/azure-cli-labs.git`
-- Switch directory - `cd azure-cli-labs\az-webapp-sql-smi`
+- Switch directory - `cd azure-cli-labs/az-webapp-sql-smi`
 - Modify the config `install-demo.cfg` as required. 
 - Launch demo - `bash install-demo.sh`
 
