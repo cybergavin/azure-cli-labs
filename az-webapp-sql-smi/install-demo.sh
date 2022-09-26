@@ -93,6 +93,8 @@ az webapp config appsettings set --resource-group $resource_group --name $app --
 [[ $? -eq 0 ]] && echo -e "Configured environment variable DB_SERVER for webapp ${app}\n" 
 az webapp config appsettings set --resource-group $resource_group --name $app --settings DB_NAME=$db >> $logfile
 [[ $? -eq 0 ]] && echo -e "Configured environment variable DB_NAME for webapp ${app}\n" 
+az webapp config appsettings set --resource-group $resource_group --name $app --settings LOCATION=$region_name >> $logfile
+[[ $? -eq 0 ]] && echo -e "Configured environment variable LOCATION for webapp ${app}\n" 
 echo -e "Sleeping for 10 seconds...Zzzzz\n" 
 sleep 10
 # Create contained user in Azure SQL Database for user-assigned managed identity (Requires sqlcmd')

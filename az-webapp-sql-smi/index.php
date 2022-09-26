@@ -21,17 +21,18 @@
  </style>
  </head>
  <body>
+ <br /> 
 <p align="justify">
-	This sample <a href="https://github.com/cybergavin/azure-cli-labs/tree/master/az-webapp-sql-smi">PHP demo web application</a> (adapted from <a href="https://github.com/uglide/azure-content/blob/master/articles/app-service-web/web-sites-php-sql-database-deploy-use-git.md" target="_blank">here</a>) may be used with the accompanying guidelines in this git repo, for deployment on an <b>Azure App Service Plan</b> with an <b>Azure SQL Database</b> (connection enabled by a <b>system-assigned managed identity</b>). 
-</p>
-<br /> 
 <?php
 // Obtain connection details from environment variables.
 $db_server = getenv("DB_SERVER");
 $db_name = getenv("DB_NAME");
+$location = getenv("LOCATION");
 $connectionString = "sqlsrv:server=$db_server;Database=$db_name;Authentication=ActiveDirectoryMsi;";
-echo "The <b>Connection string</b> used for Azure SQL with a system-assigned managed identity is : <font color=\"green\">\"".$connectionString."\"</font>"
+echo "This is a demo <a href=\"https://github.com/cybergavin/azure-cli-labs/tree/master/az-webapp-sql-smi\">PHP web application</a> (adapted from <a href=\"https://github.com/uglide/azure-content/blob/master/articles/app-service-web/web-sites-php-sql-database-deploy-use-git.md\" target=\"_blank\">here</a>) that is hosted in <b>".$location."</b> and running on an <b>Azure App Service Plan</b> with an <b>Azure SQL Database</b> (connection enabled by a <b>system-assigned managed identity</b>). ";
+echo "<br />The <b>Connection string</b> used for Azure SQL DB with a system-assigned managed identity is : <font color=\"green\">\"".$connectionString."\"</font>";
 ?>
+</p>
 <br /><br />
 <hr />
 <br />
